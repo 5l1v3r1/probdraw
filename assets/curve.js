@@ -55,6 +55,7 @@
       if (endX <= p2.x) {
         break;
       }
+      ++pointIdx;
     }
 
     return sum;
@@ -69,8 +70,8 @@
     }
     var firstIdx = -1;
     var lastIdx = this._points.length;
-    while ((lastIdx - firstIdx) >= 1) {
-      var mid = (firstIdx + lastIdx) >>> 1;
+    while ((lastIdx - firstIdx) > 1) {
+      var mid = (firstIdx + lastIdx) >> 1;
       var p = this._points[mid];
       if (p.x === x) {
         return mid;

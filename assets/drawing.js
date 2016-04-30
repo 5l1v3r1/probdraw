@@ -22,7 +22,12 @@
   }
 
   Drawing.prototype.curve = function() {
-    return new window.app.Curve(this._points);
+    var posNegPoints = [];
+    for (var i = 0, len = this._points.length; i < len; ++i) {
+      var p = this._points[i];
+      posNegPoints[i] = {x: p.x*2 - 1, y: (DRAWABLE_PORTION - p.y) / DRAWABLE_PORTION};
+    }
+    return new window.app.Curve(posNegPoints);
   };
 
   Drawing.prototype._hideCaption = function() {
@@ -105,8 +110,6 @@
     this._curvePath.setAttribute('d', pathData);
   };
 
-  window.addEventListener('load', function() {
-    new Drawing();
-  });
+  window.app.Drawing = Drawing;
 
 })();

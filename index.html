@@ -12,10 +12,13 @@
     <script type="text/javascript">
     window.app = {};
     </script>
-    <script src="assets/drawing.js"></script>
+    <script src="assets/main.js"></script>
     <script src="assets/curve.js"></script>
+    <script src="assets/drawing.js"></script>
+    <script src="assets/generator.js"></script>
+    <script src="assets/generator_view.js"></script>
   </head>
-  <body>
+  <body class="drawing">
     <svg id="drawing" viewBox="0 0 500 250">
       <g stroke-width="2" stroke="#d5d5d5" fill="#d5d5d5">
         <line x1="3" x2="497" y1="240" y2="240" />
@@ -36,5 +39,13 @@
         </text>
       </g>
     </svg>
+
+    <div id="generator">
+      <label id="generator-output">Hit "Generate"</label>
+      <br>
+      <button id="generator-next">Generate</button>
+      <br>
+      <button id="generator-back">Draw new distribution</button>
+    </div>
   </body>
 </html>
