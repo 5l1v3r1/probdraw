@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
+      user-scalable=no">
+
+    <link rel="stylesheet" href="assets/main.css" type="text/css">
+
+    <title>distdraw</title>
+
+    <script src="assets/drawing.js"></script>
+  </head>
+  <body>
+    <svg id="drawing" viewBox="0 0 500 250">
+      <path id="drawing-curve" stroke-width="2" stroke-linejoin="round"
+            stroke-linecap="round" />
+      <g id="drawing-caption">
+        <!-- TODO: round this box like a boss -->
+        <path d="M200,100 h100 v50 h-100 z" fill="#f0f0f0" fill-opacity="0.5" />
+        <text x="250" y="125" font-family="sans-serif" font-size="16"
+              text-anchor="middle" alignment-baseline="middle">
+          Draw a curve
+        </text>
+      </g>
+    </svg>
+  </body>
+</html>
