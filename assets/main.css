@@ -6,6 +6,9 @@ html, body {
 }
 
 #drawing {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   display: block;
   background-color: white;
   position: absolute;
