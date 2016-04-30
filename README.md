@@ -1,3 +1,3 @@
 # probdraw
 
-This web application lets you draw your own probability distributions, then use said distributions to generate random numbers.
+Once it is finished, this web application will let you generate random numbers based on probability distributions that you draw.
