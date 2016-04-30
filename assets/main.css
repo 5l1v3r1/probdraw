@@ -29,3 +29,13 @@ body.drawing > #generator, body.generator > #drawing {
 #generator-next {
   margin: 10px;
 }
+
+#histogram {
+  margin-top: 10px;
+  width: 200px;
+  height: 100px;
+}
+
+#histogram.empty {
+  display: none;
+}
