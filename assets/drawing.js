@@ -13,11 +13,17 @@
 
     this._points = [];
 
+    this.onDone = null;
+
     this._resize();
     window.addEventListener('resize', this._resize.bind(this));
 
     this._registerMouseEvents();
   }
+
+  Drawing.prototype.curve = function() {
+    return new window.app.Curve(this._points);
+  };
 
   Drawing.prototype._hideCaption = function() {
     this._caption.setAttribute('style', 'display: none');
@@ -62,7 +68,9 @@
       boundUpHandler = function() {
         window.removeEventListener('mousemove', boundMoveHandler);
         window.removeEventListener('mouseup', boundUpHandler);
-        // TODO: fire some sort of "done drawing" callback.
+        if (this.onDone) {
+          this.onDone();
+        }
       }.bind(this);
       window.addEventListener('mousemove', boundMoveHandler);
       window.addEventListener('mouseup', boundUpHandler);
